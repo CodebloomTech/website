@@ -3,46 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found - Codebloom | Digital Solutions</title>
-    <meta name="description" content="Custom software development, cloud solutions, and digital transformation services. Page not found - let us help you find what you need.">
-    
-    <!-- Essential Open Graph Tags for Discord/Social Sharing -->
-    <meta property="og:title" content="Page Not Found - Codebloom">
-    <meta property="og:description" content="Custom software development, cloud solutions, and digital transformation services.">
-    <meta property="og:image" content="https://ik.imagekit.io/shqdrack/image-removebg-preview.png">
-    <meta property="og:url" content="https://yourdomain.com/404.html">
-    <meta property="og:type" content="website">
-    
-    <!-- Twitter Card Data -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@codebloom_tech">
-    <meta name="twitter:title" content="Page Not Found - Codebloom">
-    <meta name="twitter:description" content="Custom software development, cloud solutions, and digital transformation services.">
-    <meta name="twitter:image" content="https://ik.imagekit.io/shqdrack/image-removebg-preview.png">
-    
-    <!-- Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Codebloom",
-      "url": "https://yourdomain.com",
-      "logo": "https://ik.imagekit.io/shqdrack/image-removebg-preview.png",
-      "sameAs": [
-        "https://facebook.com/codebloom",
-        "https://twitter.com/codebloom_tech",
-        "https://linkedin.com/company/codebloom"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+255-754-000-000",
-        "contactType": "Customer Support",
-        "areaServed": "TZ",
-        "availableLanguage": "English"
-      }
-    }
-    </script>
-    
+    <title>Page Not Found - Codebloom</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -679,53 +640,6 @@
             animation: pulse 1.5s infinite;
         }
 
-        /* SEO/Social Preview Card */
-        .preview-card {
-            background: white;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-lg);
-            max-width: 600px;
-            margin: 40px auto;
-            overflow: hidden;
-            border: 1px solid #e2e8f0;
-        }
-        
-        .preview-image {
-            width: 100%;
-            height: 315px;
-            background: linear-gradient(135deg, #7e22ce 0%, #0ea5e9 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        
-        .preview-image img {
-            max-height: 80%;
-            max-width: 80%;
-        }
-        
-        .preview-content {
-            padding: 25px;
-        }
-        
-        .preview-title {
-            font-size: 1.6rem;
-            margin-bottom: 10px;
-            color: var(--dark);
-        }
-        
-        .preview-description {
-            color: var(--gray);
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
-        
-        .preview-url {
-            color: var(--secondary);
-            font-size: 0.9rem;
-        }
-
         /* Animations */
         @keyframes slideUp {
             from { 
@@ -789,10 +703,6 @@
             
             .search-results {
                 max-height: 50vh;
-            }
-            
-            .preview-card {
-                max-width: 90%;
             }
         }
 
@@ -873,10 +783,6 @@
                 border-radius: var(--radius);
                 padding: 16px;
             }
-            
-            .preview-image {
-                height: 200px;
-            }
         }
     </style>
 </head>
@@ -956,23 +862,6 @@
                 </button>
             </form>
             <div id="searchResults" class="search-results"></div>
-        </div>
-    </section>
-
-    <!-- SEO/Social Preview Demo -->
-    <section class="search-section">
-        <div class="container">
-            <h3 style="text-align: center; margin-bottom: 30px;">How Your Site Appears on Social Media</h3>
-            <div class="preview-card">
-                <div class="preview-image">
-                    <img src="https://ik.imagekit.io/shqdrack/image-removebg-preview.png" alt="Codebloom Logo">
-                </div>
-                <div class="preview-content">
-                    <div class="preview-title">Codebloom - Digital Innovation & Technology Solutions</div>
-                    <div class="preview-description">Custom software development, cloud solutions, and digital transformation services for businesses in Tanzania and beyond.</div>
-                    <div class="preview-url">yourdomain.com</div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -1101,12 +990,12 @@
             }
         });
         
-        // Search functionality with real page data
+        // Search functionality
         const searchForm = document.getElementById('searchForm');
         const searchInput = document.getElementById('searchInput');
         const searchResults = document.getElementById('searchResults');
         
-        // Real page information for search index
+        // Sample search index (replace with your actual content)
         const searchIndex = [
             {
                 title: "Home",
@@ -1142,16 +1031,6 @@
                 title: "Contact Us",
                 content: "Reach out to our team for inquiries, project discussions, or partnership opportunities. We're here to help you transform your digital landscape.",
                 url: "contact.html"
-            },
-            {
-                title: "About Codebloom",
-                content: "Learn about our mission, vision, and the team behind Codebloom. We're passionate about delivering innovative technology solutions that drive business growth.",
-                url: "about.html"
-            },
-            {
-                title: "Careers",
-                content: "Join our team of talented developers, designers, and technology enthusiasts. Explore career opportunities at Codebloom and grow with us.",
-                url: "careers.html"
             }
         ];
         
@@ -1245,18 +1124,24 @@
         });
         
         // Logic to handle 404 redirects
+        // Note: This is client-side only. Real 404 handling should be server-side.
         const validPages = ['index.html', 'services.html', 'medicore.html', 'educore.html', 'staffcore.html', 'blog.html', 'contact.html'];
         
         function checkPageValidity() {
             const currentPage = window.location.pathname.split('/').pop();
             
+            // If we're not on a valid page and not on the 404 page
             if (!validPages.includes(currentPage) && !window.location.href.includes('404.html')) {
+                // Redirect to 404 page
                 window.location.href = '404.html';
             }
         }
         
+        // Check page validity on load
+        // In a real implementation, this would be handled by the server
+        // This is just a client-side demonstration
         window.addEventListener('load', () => {
-            // Uncomment for client-side 404 checking
+            // Uncomment the next line for client-side 404 checking
             // checkPageValidity();
         });
     </script>
