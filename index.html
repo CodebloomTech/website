@@ -1027,6 +1027,118 @@
                 grid-template-columns: 1fr;
                 max-width: 400px;
             }
+
+            /* Cookie Consent Popup */
+        .cookie-popup {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            max-width: 380px;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            padding: 25px;
+            z-index: 1000;
+            transform: translateY(150%);
+            opacity: 0;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+        
+        .cookie-popup.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .cookie-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .cookie-icon {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+        
+        .cookie-header h3 {
+            font-size: 1.4rem;
+            color: var(--dark);
+        }
+        
+        .cookie-content p {
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        
+        .cookie-links {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .cookie-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: var(--transition);
+        }
+        
+        .cookie-link:hover {
+            color: var(--primary-dark);
+            transform: translateX(5px);
+        }
+        
+        .cookie-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: flex-end;
+        }
+        
+        .cookie-btn {
+            padding: 10px 20px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+        }
+        
+        .cookie-accept {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .cookie-accept:hover {
+            background: var(--primary-dark);
+        }
+        
+        .cookie-settings {
+            background: transparent;
+            color: var(--dark);
+            border: 1px solid var(--light-gray);
+        }
+        
+        .cookie-settings:hover {
+            background: var(--light-bg);
+        }
+        
+        @media (max-width: 768px) {
+            .cookie-popup {
+                max-width: calc(100% - 40px);
+                left: 20px;
+                right: 20px;
+                bottom: 20px;
+            }
+            
+            .cookie-buttons {
+                flex-direction: column;
+            }
+            
         }
     </style>
 </head>
@@ -1357,6 +1469,35 @@
         </div>
     </footer>
 
+ 
+    <!-- Cookie Consent Popup -->
+    <div class="cookie-popup" id="cookiePopup">
+        <div class="cookie-header">
+            <div class="cookie-icon">
+                <i class="fas fa-cookie-bite"></i>
+            </div>
+            <h3>Your Privacy Matters</h3>
+        </div>
+        
+        <div class="cookie-content">
+            <p>We use cookies to enhance your browsing experience and analyze site traffic. By continuing to use our site, you consent to our use of cookies.</p>
+            
+            <div class="cookie-links">
+                <a href="/privacy" class="cookie-link">
+                    <i class="fas fa-shield-alt"></i>
+                    Privacy Policy
+                </a>
+                <a href="/terms" class="cookie-link">
+                    <i class="fas fa-file-contract"></i>
+                    Terms of Service
+                </a>
+                <a href="/cookies" class="cookie-link">
+                    <i class="fas fa-cookie"></i>
+                    Cookie Policy
+                </a>
+            </div>
+        </div>
+    
     <script>
         // Mobile menu toggle
         const mobileToggle = document.querySelector('.mobile-toggle');
@@ -1499,5 +1640,60 @@
             }
         });
     </script>
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookiePopup = document.getElementById('cookiePopup');
+            const cookieAccept = document.getElementById('cookieAccept');
+            const cookieSettings = document.getElementById('cookieSettings');
+            
+            // Check if user has already accepted
+            if (!getCookie('cookiesAccepted')) {
+                // Show popup after a short delay
+                setTimeout(() => {
+                    cookiePopup.classList.add('active');
+                }, 2000);
+            }
+            
+            // Accept button handler
+            cookieAccept.addEventListener('click', function() {
+                setCookie('cookiesAccepted', 'true', 365);
+                cookiePopup.classList.remove('active');
+            });
+            
+            // Settings button handler
+            cookieSettings.addEventListener('click', function() {
+                alert('Cookie preferences would open here. For this demo, please use the links above.');
+            });
+            
+            // Cookie functions
+            function setCookie(name, value, days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                const expires = "expires=" + date.toUTCString();
+                document.cookie = name + "=" + value + ";" + expires + ";path=/";
+            }
+            
+            function getCookie(name) {
+                const cookieName = name + "=";
+                const decodedCookie = decodeURIComponent(document.cookie);
+                const cookieArray = decodedCookie.split(';');
+                
+                for(let i = 0; i < cookieArray.length; i++) {
+                    let cookie = cookieArray[i];
+                    while (cookie.charAt(0) === ' ') {
+                        cookie = cookie.substring(1);
+                    }
+                    if (cookie.indexOf(cookieName) === 0) {
+                        return cookie.substring(cookieName.length, cookie.length);
+                    }
+                }
+                return "";
+            }
+        });
+    </script>
+</body>
 </body>
 </html>
