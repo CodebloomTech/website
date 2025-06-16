@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Codebloom</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Codebloom Privacy Policy - We take your privacy seriously and want you to feel safe whenever you interact with us. Learn how we protect your data.">
+    <link rel="canonical" href="https://codebloom.co.tz/privacy">
+    <link rel="icon" type="image/x-icon" href="https://codebloom.co.tz/assets/favicon.ico" />
+    <meta name="keywords" content="privacy policy, data protection, GDPR, personal data, cookies, Codebloom">
+    <meta name="author" content="Codebloom Team">
+    <meta name="robots" content="index, follow">
+
+    <!-- Discord/Social Tags -->
+    <meta property="og:title" content="Privacy Policy - Codebloom">
+    <meta property="og:description" content="Learn how Codebloom protects your personal information and respects your privacy rights.">
+    <meta property="og:image" content="/assets/Privacy.png">
+    <meta property="og:url" content="https://codebloom.co.tz/privacy">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #7e22ce;
+            --primary-dark: #6b21a8;
+            --primary-light: #a855f7;
+            --secondary: #0ea5e9;
+            --secondary-light: #38bdf8;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --light-bg: #f1f5f9;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+            --radius: 12px;
+            
+            /* Dark mode variables */
+            --bg-color: #f8fafc;
+            --text-color: #0f172a;
+            --card-bg: #ffffff;
+            --section-bg: #ffffff;
+            --footer-bg: #0f172a;
+            --footer-text: #cbd5e1;
+            --nav-bg: rgba(255, 255, 255, 0.95);
+            --nav-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --border-color: #e2e8f0;
+        }
+
+        /* Dark mode theme */
+        .dark-mode {
+            --bg-color: #0f172a;
+            --text-color: #e2e8f0;
+            --card-bg: #1e293b;
+            --section-bg: #1e293b;
+            --footer-bg: #020617;
+            --footer-text: #94a3b8;
+            --nav-bg: rgba(30, 41, 59, 0.95);
+            --nav-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            --border-color: #334155;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            line-height: 1.7;
+            background-color: var(--bg-color);
+            overflow-x: hidden;
+            animation: fadeIn 1s forwards;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--text-color);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary);
+            color: white;
+            padding: 14px 32px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            gap: 10px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: var(--primary-dark);
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .btn:hover::after {
+            width: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: var(--secondary);
+        }
+
+        .btn-secondary::after {
+            background: #0284c7;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            color: white;
+        }
+        
+        .btn-small {
+            padding: 10px 24px;
+            font-size: 0.9rem;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--nav-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            transform: translateY(-3px);
+        }
+
+        .logo img {
+            height: 50px;
+            transition: var(--transition);
+        }
+
+        .logo:hover img {
+            transform: rotate(5deg);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-menu > li {
+            position: relative;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            transition: var(--transition);
+            position: relative;
+            padding: 10px 0;
+            display: block;
+            font-size: 1.05rem;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--primary);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-color);
+            z-index: 1001;
+        }
+
+        /* Dark mode toggle */
+        .theme-toggle {
+            background: transparent;
+            border: none;
+            color: var(--text-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(126, 34, 206, 0.1);
+            transform: rotate(20deg);
+        }
+
+        /* Dropdown Menu */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            min-width: 220px;
+            padding: 15px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(15px);
+            transition: var(--transition);
+            z-index: 100;
+            border: 1px solid var(--border-color);
+        }
+
+        .nav-menu > li:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            padding: 0;
+        }
+
+        .dropdown-menu a {
+            padding: 12px 25px;
+            color: var(--text-color);
+            display: block;
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--primary-light);
+            color: white;
+            padding-left: 30px;
+        }
+
+        .dropdown-menu a::after {
+            display: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f5f3ff 0%, #e0f2fe 100%);
+            padding: 140px 0 100px;
+            position: relative;
+            overflow: hidden;
+            clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+            text-align: center;
+        }
+
+        .dark-mode .hero {
+            background: linear-gradient(135deg, #1e1b4b 0%, #0c4a6e 100%);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 25px;
+            line-height: 1.1;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 35px;
+            color: var(--gray);
+        }
+
+        .hero-pattern {
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            opacity: 0.05;
+            z-index: 1;
+            width: 600px;
+            height: 600px;
+        }
+
+        /* Privacy Policy Section */
+        .privacy-content {
+            padding: 100px 0;
+            background: var(--section-bg);
+        }
+
+        .privacy-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .privacy-section {
+            margin-bottom: 60px;
+            padding: 40px;
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .privacy-section:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .privacy-section h2 {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: var(--primary);
+        }
+
+        .privacy-section h2 i {
+            font-size: 1.5rem;
+            width: 50px;
+            height: 50px;
+            background: rgba(126, 34, 206, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .privacy-section:hover h2 i {
+            background: var(--primary);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .privacy-section h3 {
+            font-size: 1.4rem;
+            margin: 30px 0 15px;
+            color: var(--primary-light);
+        }
+
+        .privacy-section p {
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .privacy-section ul {
+            padding-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .privacy-section li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .privacy-section li::before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: -20px;
+        }
+
+        .highlight-box {
+            background: rgba(126, 34, 206, 0.05);
+            border-left: 4px solid var(--primary);
+            padding: 25px;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin: 30px 0;
+            transition: var(--transition);
+        }
+
+        .highlight-box:hover {
+            background: rgba(126, 34, 206, 0.1);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--light-bg);
+            padding: 80px 0;
+            text-align: center;
+            border-radius: var(--radius);
+        }
+
+        .dark-mode .contact-section {
+            background: #1e293b;
+        }
+
+        .contact-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-section p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: var(--card-bg);
+            padding: 20px 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+
+        .contact-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-item i {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .contact-item span {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--footer-bg);
+            color: var(--footer-text);
+            padding: 100px 0 40px;
+            clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+            color: white;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: var(--footer-text);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-light);
+            transform: translateX(5px);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #334155;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .social-icon:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+            font-size: 1rem;
+        }
+
+        .made-with-love {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+
+        .made-with-love i {
+            color: var(--secondary-light);
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0% { 
+                transform: scale(1);
+                text-shadow: 0 0 10px rgba(126, 34, 206, 0.5);
+            }
+            50% { 
+                transform: scale(1.05);
+                text-shadow: 0 0 20px rgba(126, 34, 206, 0.8);
+            }
+            100% { 
+                transform: scale(1);
+                text-shadow: 0 0 10px rgba(126, 34, 206, 0.5);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                left: 0;
+                background: var(--card-bg);
+                width: 100%;
+                height: 100vh;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 30px 0;
+                box-shadow: var(--shadow-lg);
+                transform: translateY(-100%);
+                transition: var(--transition);
+                gap: 30px;
+                z-index: 999;
+            }
+            
+            .nav-menu.active {
+                transform: translateY(0);
+            }
+            
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                padding: 15px 0 0 30px;
+                display: none;
+                background: transparent;
+            }
+            
+            .nav-menu > li:hover .dropdown-menu {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .privacy-section {
+                padding: 30px 20px;
+            }
+            
+            .privacy-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .contact-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="https://ik.imagekit.io/shqdrack/image-removebg-preview.png?updatedAt=1748842758596" alt="Codebloom Logo">
+                <span>Codebloom</span>
+            </a>
+            
+            <button class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li>
+                    <a href="/projects/">Projects <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/projects#medicore">Medicore</a></li>
+                        <li><a href="/projects#educore">Educore</a></li>
+                        <li><a href="/projects#staffcore">Staffcore</a></li>
+                    </ul>
+                </li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li>
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Privacy Policy <span>— Your Data, Your Trust</span></h1>
+            <p>Hello from Shadrack and the Codebloom team! 👋 We take your privacy seriously and want you to feel safe whenever you interact with us.</p>
+            <p>This policy explains what info we collect, how we use it, and most importantly, how we protect it. We keep things simple and transparent because you deserve that!</p>
+        </div>
+        <svg class="hero-pattern" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0H600V600H0V0Z" fill="none"/>
+            <path d="M300 0L600 300L300 600L0 300L300 0Z" fill="none" stroke="var(--primary)" stroke-width="3"/>
+            <circle cx="300" cy="300" r="200" fill="none" stroke="var(--primary)" stroke-width="3"/>
+            <circle cx="300" cy="300" r="100" fill="none" stroke="var(--primary)" stroke-width="3"/>
+        </svg>
+    </section>
+
+    <!-- Privacy Policy Content -->
+    <section class="privacy-content">
+        <div class="container privacy-container">
+            <div class="privacy-section">
+                <h2>
+                    <i class="fas fa-clipboard-list"></i>
+                    What Data We Collect
+                </h2>
+                <p>When you use our services, we may collect:</p>
+                <ul>
+                    <li><strong>Personal Information:</strong> Your name, email address, and any other info you provide when signing up or contacting us.</li>
+                    <li><strong>Usage Data:</strong> How you interact with our website or app (like pages visited, time spent).</li>
+                    <li><strong>Communication Data:</strong> Any feedback or messages you send us.</li>
+                    <li><strong>Technical Data:</strong> IP address, browser type and version, time zone setting, and other technology on the devices you use to access our services.</li>
+                </ul>
+            </div>
+
+            <div class="privacy-section">
+                <h2>
+                    <i class="fas fa-cogs"></i>
+                    How We Use Your Data
+                </h2>
+                <p>We use your information to:</p>
+                <ul>
+                    <li>Provide and improve our services specifically for you.</li>
+                    <li>Communicate important updates, offers, or support messages (only if you agree to receive them).</li>
+                    <li>Understand how you use our services to make them better and more intuitive.</li>
+                    <li>Comply with legal obligations when necessary.</li>
+                    <li>Prevent fraud and enhance the security of our services.</li>
+                </ul>
+                <p>We process your data only when we have a legal basis to do so, such as your consent, the necessity to perform a contract, or to comply with legal requirements.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>We NEVER Sell Your Data 🚫💸</h3>
+                <p>Your privacy is sacred. We do NOT sell, trade, or rent your personal data to any business partners or third parties. Your info stays with us, safe and sound. Period. 🔒</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>
+                    <i class="fas fa-shield-alt"></i>
+                    How We Protect Your Info
+                </h2>
+                <p>We care about your security! We implement a range of measures to protect your personal information:</p>
+                <ul>
+                    <li>Use modern security technologies and protocols to protect your info from unauthorized access.</li>
+                    <li>Restrict access to your data only to our trusted team members who need it to help you.</li>
+                    <li>Regularly review our systems to keep your data safe.</li>
+                    <li>Implement encryption for data both in transit and at rest.</li>
+                    <li>Conduct regular security audits and vulnerability assessments.</li>
+                </ul>
+                <p>While we strive to protect your personal data, we cannot guarantee absolute security of any information transmitted to us.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>
+                    <i class="fas fa-sliders-h"></i>
+                    Your Rights & Control
+                </h2>
+                <p>You're in charge! You can exercise the following rights regarding your personal data:</p>
+                <ul>
+                    <li><strong>Access:</strong> Request access to your personal data anytime.</li>
+                    <li><strong>Correction:</strong> Update or correct your information if something's changed.</li>
+                    <li><strong>Deletion:</strong> Ask us to delete your data if you want to leave us.</li>
+                    <li><strong>Opt-out:</strong> Opt out of marketing emails or communications at any time.</li>
+                    <li><strong>Restriction:</strong> Request restriction of processing your personal data.</li>
+                    <li><strong>Portability:</strong> Request transfer of your data to another organization.</li>
+                </ul>
+                <p>To exercise any of these rights, please contact us using the information below.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>
+                    <i class="fas fa-cookie-bite"></i>
+                    Cookies & Tracking
+                </h2>
+                <p>We use cookies and similar tracking technologies to make your experience smoother and to understand how you use our services. Cookies help us:</p>
+                <ul>
+                    <li>Remember your preferences and login information</li>
+                    <li>Analyze traffic and usage patterns</li>
+                    <li>Improve website performance</li>
+                    <li>Deliver personalized content</li>
+                </ul>
+                <p>You can control cookie settings through your browser. Please note that disabling cookies may affect the functionality of our services.</p>
+                <p>We also use analytics services like Google Analytics to collect information about how visitors use our site.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>
+                    <i class="fas fa-hourglass-half"></i>
+                    How Long We Keep Your Data
+                </h2>
+                <p>We only keep your info as long as needed to provide our services or to comply with legal requirements. Our retention periods are based on:</p>
+                <ul>
+                    <li>The purpose for which we collected the data</li>
+                    <li>Legal obligations requiring data retention</li>
+                    <li>The nature and sensitivity of the data</li>
+                    <li>Potential risk of harm from unauthorized use or disclosure</li>
+                </ul>
+                <p>Once it's no longer necessary, we securely delete or anonymize it.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>
+                    <i class="fas fa-envelope"></i>
+                    Changes to This Policy
+                </h2>
+                <p>We may update this privacy policy from time to time. When we do, we'll notify you through our services or by other means to give you the opportunity to review the changes before they become effective.</p>
+                <p>We encourage you to periodically review this page for the latest information on our privacy practices. Your continued use of our services after any changes signifies your acceptance of the updated policy.</p>
+            </div>
+
+            <div class="contact-section">
+                <h2>Contact Us</h2>
+                <p>Got questions or want to exercise your privacy rights? We're here for you! Reach out anytime:</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@codebloom.co.tz</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>P.O. Box 2160, Dodoma, United Republic of Tanzania</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+255 748 348 488</span>
+                    </div>
+                </div>
+                
+                <p style="margin-top: 40px;">Thanks for trusting us with your info! We promise to keep it safe and treat it with respect. 🙏✨</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="/" class="logo" style="color: white; margin-bottom: 20px; display: inline-flex; align-items: center; gap: 15px;">
+                        <img src="https://ik.imagekit.io/shqdrack/image-removebg-preview.png?updatedAt=1748842758596" alt="Codebloom Logo" style="height: 50px;">
+                        <span style="font-size: 1.8rem;">Codebloom</span>
+                    </a>
+                    <p style="color: var(--footer-text); margin-bottom: 25px; font-size: 1.1rem;">Digital Dreams, Engineered.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/shqdrack" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/shqdrack" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="/" class="social-icon"><i class="fa-solid fa-globe"></i></a>
+                        <a href="https://instagram.com/@shqdrack" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="/services">Custom Development</a></li>
+                        <li><a href="/services">Cloud Solutions</a></li>
+                        <li><a href="/services">Mobile Applications</a></li>
+                        <li><a href="/services">UI/UX Design</a></li>
+                        <li><a href="/services">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Projects</h3>
+                    <ul class="footer-links">
+                        <li><a href="/projects#medicore">Medicore HMS</a></li>
+                        <li><a href="/projects#educore">Educore SMS</a></li>
+                        <li><a href="/projects#staffcore">Staffcore</a></li>
+                        <li><a href="/projects">All Projects</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/cookies">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Codebloom Technologies Company Limited. All rights reserved.</p>
+                <div class="made-with-love">
+                    <span>Made with</span>
+                    <i class="fas fa-heart"></i>
+                    <span>by Shadrack</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        const icon = mobileToggle.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                }
+            });
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'var(--nav-bg)';
+                header.style.boxShadow = 'var(--nav-shadow)';
+            } else {
+                header.style.backgroundColor = 'var(--nav-bg)';
+                header.style.boxShadow = 'var(--nav-shadow)';
+            }
+        });
+        
+        // Dark mode toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('i');
+        
+        // Check for saved theme preference
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        });
+        
+        // Page transition effect
+        document.querySelectorAll('a').forEach(link => {
+            if (link.href && !link.href.startsWith('javascript') && !link.href.startsWith('mailto') && !link.href.startsWith('tel')) {
+                link.addEventListener('click', function(e) {
+                    // Only apply for same-origin links
+                    if (this.href.startsWith(window.location.origin)) {
+                        e.preventDefault();
+                        document.body.style.opacity = '0';
+                        document.body.style.transition = 'opacity 0.5s ease';
+                        setTimeout(() => {
+                            window.location.href = this.href;
+                        }, 500);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
